@@ -1,4 +1,4 @@
-import { Box, Card, Checkbox, Flex, FormControl, FormLabel, Heading, HStack, Input, Select, SliderFilledTrack, SliderThumb, SliderTrack, VStack, } from '@chakra-ui/react'
+import { Box, Card, Checkbox, Flex, FormControl, FormLabel, Heading, HStack, Input, Select, Skeleton, SkeletonCircle, SkeletonText, SliderFilledTrack, SliderThumb, SliderTrack, VStack, } from '@chakra-ui/react'
 import axios from 'axios'
 import React, { useEffect, useRef, useState } from 'react'
 import { useParams } from 'react-router-dom'
@@ -9,6 +9,8 @@ import MumbaiHotels from './MumbaiHotels.json'
 import DelhiHotels from './DelhiHotels.json'
 
 const HotelPage = () => {
+const [isLoading,setIsLoading]=useState(true)
+  let cartArr=[]
     const [hotels,setHotels]=useState([])
     const {city}=useParams()
     const getData=()=>{
@@ -16,11 +18,39 @@ const HotelPage = () => {
     }
 
     useEffect(()=>{
+      setIsLoading(true)
         getData().then((res)=>{
             console.log(res)
             setHotels(res.data)
+            setIsLoading(false)
         })
-    },[])
+    },[city])
+
+if(isLoading){
+  return (<>
+  <Skeleton w='60%' m='auto' startColor='pink.500' endColor='orange.500' height='20px' />
+  <Box padding='6' w="60%" m='auto'  boxShadow='lg' bg='white'>
+  <SkeletonCircle size='10' />
+  <SkeletonText mt='4' noOfLines={4} spacing='4' skeletonHeight='2' />
+</Box>
+<Box padding='6' w="60%" m='auto'  boxShadow='lg' bg='white'>
+  <SkeletonCircle size='10' />
+  <SkeletonText mt='4' noOfLines={4} spacing='4' skeletonHeight='2' />
+</Box>
+<Box padding='6' w="60%" m='auto'  boxShadow='lg' bg='white'>
+  <SkeletonCircle size='10' />
+  <SkeletonText mt='4' noOfLines={4} spacing='4' skeletonHeight='2' />
+</Box>
+<Box padding='6' w="60%" m='auto'  boxShadow='lg' bg='white'>
+  <SkeletonCircle size='10' />
+  <SkeletonText mt='4' noOfLines={4} spacing='4' skeletonHeight='2' />
+</Box>
+<Box padding='6' w="60%" m='auto' boxShadow='lg' bg='white'>
+  <SkeletonCircle size='10' />
+  <SkeletonText mt='4' noOfLines={4} spacing='4' skeletonHeight='2' />
+</Box></>)
+}
+
   return (
     <>
     
@@ -86,7 +116,7 @@ const HotelPage = () => {
         
       </Box>
     <Box w="60%" m='auto'>
-    {hotels.map((hotel)=>(<HotelCard price2={hotel.price2} title={hotel.title} provider={hotel.providerlogo} review_count={hotel.review_count} price={hotel.price}  image={hotel.image} />))}
+    {hotels.map((hotel)=>(<HotelCard cartArr={cartArr} price2={hotel.price2} title={hotel.title} provider={hotel.providerlogo} review_count={hotel.review_count} price={hotel.price}  image={hotel.image} />))}
     </Box>
     </Flex></>
   )
