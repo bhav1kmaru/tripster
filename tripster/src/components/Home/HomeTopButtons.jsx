@@ -1,4 +1,6 @@
-import { Button, ButtonGroup, Container, FormControl, FormLabel, Input, InputGroup, InputLeftElement, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, Stack, Text, useDisclosure } from '@chakra-ui/react'
+import { Box, Button, ButtonGroup, Container, Flex, FormControl, FormLabel, Input, InputGroup, InputLeftElement, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, Stack, Text, useDisclosure } from '@chakra-ui/react'
+import {HiOutlineHomeModern} from 'react-icons/hi2'
+import {MdAutoAwesome} from 'react-icons/md'
 import {
   Menu,
   MenuButton,
@@ -14,6 +16,10 @@ import React from 'react'
 import {MdBed} from 'react-icons/md'
 import { Link } from 'react-router-dom'
 import {SearchIcon} from '@chakra-ui/icons'
+import {IoRestaurantOutline} from 'react-icons/io5'
+import {BsGlobe2} from 'react-icons/bs'
+import {FiMoreVertical} from 'react-icons/fi'
+import {GoLocation} from 'react-icons/go'
 
 export default function HomeTopButtons(){
 
@@ -25,23 +31,23 @@ export default function HomeTopButtons(){
 return (
     <Stack width="60%" m="30px auto 30px auto"  direction='row' align='center'>
   <Button onClick={onOpen} _hover={{ bg: 'black',color:"white" }} borderRadius="12px" width="150px" height="50px" bgColor="white" border="1px solid black" size="md">
-    Hotels
+    Hotels&nbsp; <MdBed />
   </Button>
-  <Button _hover={{ bg: 'black',color:"white" }} borderRadius="12px" width="250px" height="50px" bgColor="white" border="1px solid black" size="md">
-    Holiday Homes
+  <Button onClick={onOpen} _hover={{ bg: 'black',color:"white" }} borderRadius="12px" width="250px" height="50px" bgColor="white" border="1px solid black" size="md">
+    Holiday Homes&nbsp; <HiOutlineHomeModern />
   </Button>
-  <Button _hover={{ bg: 'black',color:"white" }} borderRadius="12px" width="250px" height="50px" bgColor="white" border="1px solid black" size="md">
-    Things to Do
+  <Button onClick={onOpen} _hover={{ bg: 'black',color:"white" }} borderRadius="12px" width="250px" height="50px" bgColor="white" border="1px solid black" size="md">
+    Things to Do&nbsp; <MdAutoAwesome />
   </Button>
-  <Button _hover={{ bg: 'black',color:"white" }} borderRadius="12px" width="250px" height="50px" bgColor="white" border="1px solid black" size="md">
-    Restaurants
+  <Button onClick={onOpen} _hover={{ bg: 'black',color:"white" }} borderRadius="12px" width="250px" height="50px" bgColor="white" border="1px solid black" size="md">
+    Restaurants&nbsp; <IoRestaurantOutline />
   </Button>
   <Button _hover={{ bg: 'black',color:"white" }} borderRadius="12px" width="150px" height="50px" bgColor="white" border="1px solid black" size="md">
-    Travel Stories
+    Travel Stories&nbsp; <BsGlobe2 />
   </Button>
   <Menu>
   <MenuButton height="50px" borderRadius="12px" _hover={{ bg: 'black',color:"white" }} bgColor="white" border="1px solid black" as={Button} >
-    More
+    More ...
   </MenuButton>
   <MenuList>
     <MenuItem>Add a Place</MenuItem>
@@ -73,18 +79,17 @@ return (
     <Input borderRadius="32px" bg="white" placeholder='Where to?' />
   </InputGroup>
             </FormControl>
-            <hr></hr>
-            <Text mt='20px' mb='10px' p="5px 10px" borderRadius="10px" border="1px solid gray">Nearby</Text>
+            <Flex mt='20px' mb='10px' p="5px 10px" borderRadius="10px" border="1px solid #e4eaf1"> <Box mr='5px' mt='5px'><GoLocation /></Box>Nearby </Flex>
             <hr></hr>
             <Text mt='20px'>Recently Searched</Text>
-            <Link to='/hotels/mumbai'><Text onClick={onClose} mb='10px' p="5px 10px" borderRadius="10px" border="1px solid gray">Mumbai</Text></Link>
-            <Link to='hotels/delhi'><Text p="5px 10px" borderRadius="10px" border="1px solid gray">Delhi</Text></Link>
+            <Link to='/hotels/mumbai'><Text onClick={onClose} mb='10px' p="5px 10px" borderRadius="10px" border="1px solid #e4eaf1">Mumbai</Text></Link>
+            <Link to='hotels/delhi'><Text onClick={onClose} p="5px 10px" borderRadius="10px" border="1px solid #e4eaf1">Delhi</Text></Link>
           </ModalBody>
 
           <ModalFooter>
-            <Button  _hover={{ bg: 'black',color:"white" }} borderRadius="12px" width="100px" height="50px" bgColor="white" border="1px solid black" size="md" mr='5px'>
+            <Link to='/hotels/mumbai'><Button onClick={()=>onClose()}  _hover={{ bg: 'black',color:"white" }} borderRadius="12px" width="100px" height="50px" bgColor="white" border="1px solid black" size="md" mr='5px'>
               Search
-            </Button>
+            </Button></Link>
             <Button onClick={onClose} _hover={{ bg: 'black',color:"white" }} borderRadius="12px" width="100px" height="50px" bgColor="white" border="1px solid black" size="md">Cancel</Button>
           </ModalFooter>
         </ModalContent>

@@ -8,6 +8,7 @@ import { Box, Button, ButtonGroup, Flex, FormControl, FormLabel, Heading, Image,
 import HomeTopButtons from "./Home/HomeTopButtons";
 import {AuthContext} from '../components/contexts/AuthContext'
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 export default function Navbar(){
 
@@ -85,15 +86,15 @@ const signIn=(<>
 
   return(<><Flex maxWidth={{base:"60%",sm:"100%",md:"70%",lg:"60%"}} m="auto" alignItems='center' gap='2'>
   <Box p='2'>
-    <Heading size='md'><Image height={{base:"90px",sm:"70px",md:"80px",lg:"90px"}} src="https://i.ibb.co/3rcKh77/Tripster-removebg-preview.png" alt="Tripster-removebg-preview" border="0" /></Heading>
+    <Link to='/'><Heading size='md'><Image height={{base:"90px",sm:"70px",md:"80px",lg:"90px"}} src="https://i.ibb.co/3rcKh77/Tripster-removebg-preview.png" alt="Tripster" border="0" /></Heading></Link>
   </Box>
   <Spacer />
   <Flex gap='2'>
-    <Button variant="ghost" colorScheme='gray' borderRadius="20px"><TbPencil />&nbsp;<Text display={{base:"block",sm:"none",md:"block",lg:"block"}}>Review</Text></Button>
+    <Link to='/review'><Button variant="ghost" colorScheme='gray' borderRadius="20px"><TbPencil />&nbsp;<Text display={{base:"block",sm:"none",md:"block",lg:"block"}}>Review</Text></Button></Link>
     <Button variant="ghost" colorScheme='gray' borderRadius="20px"><FiHeart />&nbsp;<Text display={{base:"block",sm:"none",md:"block",lg:"block"}}>Trips</Text></Button>
-    <Button variant="ghost" colorScheme='gray' borderRadius="20px"><BsBell />&nbsp;<Text display={{base:"block",sm:"none",md:"block",lg:"block"}}>Alerts</Text></Button>
+    <Link to='/alerts'><Button variant="ghost" colorScheme='gray' borderRadius="20px"><BsBell />&nbsp;<Text display={{base:"block",sm:"none",md:"block",lg:"block"}}>Alerts</Text></Button></Link>
     {isAuth?(<Avatar name='Eve Holt' src='https://bit.ly/kent-c-dodds' />):(<Button onClick={onOpen} bgColor="black" color="white" borderRadius="20px">Sign In</Button>)}
-    <Button variant="ghost" colorScheme='gray' borderRadius="20px"><BsCart3 />&nbsp;<Text display={{base:"block",sm:"none",md:"block",lg:"block"}}>Basket</Text></Button>
+    <Link to='/basket'><Button variant="ghost" colorScheme='gray' borderRadius="20px"><BsCart3 />&nbsp;<Text display={{base:"block",sm:"none",md:"block",lg:"block"}}>Basket</Text></Button></Link>
   </Flex>
 </Flex>
 <Modal

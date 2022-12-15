@@ -9,7 +9,26 @@ import {
   SliderMark,
 } from '@chakra-ui/react'
 
-const HotelCard = ({image,title,price,provider,review_count,price2}) => {
+const HotelCard = ({image,title,price,provider,review_count,price2,cartArr}) => {
+
+
+
+  const onAdd=(title,price,image)=>{
+let arr=price.split("₹")
+let arr2=arr[1].split(",")
+let finalPrice=arr2[0]+arr2[1]
+    const send={
+      title: title,
+      image: image,
+      price: Number(finalPrice),
+    }
+    console.log(send)
+    cartArr.push(send)
+    console.log(cartArr)
+    localStorage.setItem("Basket",JSON.stringify(cartArr))
+  }
+
+
   return (
     <div style={{margin:"auto",marginBottom:"20px"}}>
     <Card
@@ -40,9 +59,10 @@ const HotelCard = ({image,title,price,provider,review_count,price2}) => {
     </CardBody>
 
     <CardFooter>
-      <a href='https://www.agoda.com/search?cid=1856692&currency=INR&checkin=2022-12-27&checkout=2023-01-03&NumberofAdults=1&NumberofChildren=0&childages=&Rooms=1&mcid=27800&pid=804ad829-7077-4b74-8e1e-ecbf6c0fc6f9&audid=&audm=&MBL=M&BaseRate=7458.13&TaxandFee=967.84&BasePriceDisplay=L&DisplayCurrency=INR&ccallout=FALSE&source=sp&hl=en&tag=hid237607,pid804ad829-7077-4b74-8e1e-ecbf6c0fc6f9&n=0&selectedproperty=237607&city=14552&adults=1&children=0&hc=INR&los=7'><Button borderRadius="20px" variant='solid' backgroundColor="#f2b203">
+      <a href='https://www.agoda.com/search?cid=1856692&currency=INR&checkin=2022-12-27&checkout=2023-01-03&NumberofAdults=1&NumberofChildren=0&childages=&Rooms=1&mcid=27800&pid=804ad829-7077-4b74-8e1e-ecbf6c0fc6f9&audid=&audm=&MBL=M&BaseRate=7458.13&TaxandFee=967.84&BasePriceDisplay=L&DisplayCurrency=INR&ccallout=FALSE&source=sp&hl=en&tag=hid237607,pid804ad829-7077-4b74-8e1e-ecbf6c0fc6f9&n=0&selectedproperty=237607&city=14552&adults=1&children=0&hc=INR&los=7'><Button mr="10px" borderRadius="20px" variant='solid' backgroundColor="#f2b203">
         View Deal
       </Button></a>
+      <Button onClick={()=>onAdd(title,price,image)} borderRadius="20px" variant='solid' backgroundColor="#f2b203">Add to Basket</Button>
     </CardFooter>
     <div style={{padding:"10px"}}>
     <p style={{fontSize:'12px'}}>Free Cancellation</p>
