@@ -112,7 +112,8 @@ const signIn=(<>
           </ModalBody>
 
           <ModalFooter>
-            <Button isLoading={isLoading} onClick={onSubmit} backgroundColor="black" color="white" mr={3}>
+            <a href='https://tripster-dashboard-bhav1kmaru.vercel.app/login'>Login as admin</a>
+            <Button isLoading={isLoading} onClick={onSubmit} backgroundColor="black" color="white" ml={3} mr={3}>
               {newUser?"Create Account":"Sign In"}
             </Button>
             <Button onClick={onClose}>Cancel</Button>
