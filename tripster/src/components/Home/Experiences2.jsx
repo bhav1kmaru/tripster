@@ -2,23 +2,23 @@ import { Button, ButtonGroup, Card, CardBody, CardFooter, Container, Divider, He
 import React from 'react'
 
 const data=[{
-    title:"Ubud Tour - Best of Ubud - All Inclusive",
-    price:"7,524",
+    title:"5-Hour Private Mumbai Sightseeing Tour (Travellers Choice Award Winner)",
+    price:"9,524",
     reviews:"2,345",
-    img:"https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/65/66/4a/caption.jpg?w=300&h=300&s=1"
+    img:"https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/5a/33/2c/caption.jpg?w=300&h=300&s=1"
 },{
-    title:"Tokyo Full-Day Private Tour with guide",
-    price:"8,697",
+    title:"Patan Modhera Day Trip from Ahmedabad",
+    price:"4,697",
     reviews:"158",
-    img:"https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/57/03/51/caption.jpg?w=300&h=300&s=1"
+    img:"https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/64/07/90/caption.jpg?w=300&h=300&s=1"
 },{
-    title:"Private Taj Mahal Tour from Delhi by Car - All Inclusive",
-    price:"5,601",
+    title:"World heritage Ahmedabad city tour in private car",
+    price:"10,150",
     reviews:"1,451",
-    img:"https://dynamic-media-cdn.tripadvisor.com/media/photo-o/21/67/e5/07/caption.jpg?w=300&h=300&s=1"
+    img:"https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/59/38/13/caption.jpg?w=300&h=300&s=1"
 }]
 
-const Experiences = () => {
+const Experiences2 = () => {
   return (
     <div style={{width:"55%",margin:"auto"}}>
         
@@ -85,4 +85,4 @@ const Experiences = () => {
   )
 }
 
-export default Experiences
+export default Experiences2

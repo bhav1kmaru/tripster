@@ -2,23 +2,23 @@ import { Button, ButtonGroup, Card, CardBody, CardFooter, Container, Divider, He
 import React from 'react'
 
 const data=[{
-    title:"Ubud Tour - Best of Ubud - All Inclusive",
+    title:"Private Full Day Sightseeing Tour to Mount Fuji and Hakone",
     price:"7,524",
     reviews:"2,345",
-    img:"https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/65/66/4a/caption.jpg?w=300&h=300&s=1"
+    img:"https://dynamic-media-cdn.tripadvisor.com/media/photo-o/26/13/9a/c6/caption.jpg?w=300&h=300&s=1"
 },{
-    title:"Tokyo Full-Day Private Tour with guide",
+    title:"Phi Phi Islands Adventure Day Trip",
     price:"8,697",
     reviews:"158",
-    img:"https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/57/03/51/caption.jpg?w=300&h=300&s=1"
+    img:"https://dynamic-media-cdn.tripadvisor.com/media/photo-o/21/fa/1f/ae/caption.jpg?w=300&h=300&s=1"
 },{
-    title:"Private Taj Mahal Tour from Delhi by Car - All Inclusive",
-    price:"5,601",
+    title:"Lion City Bike Tour of Singapore West",
+    price:"5,360",
     reviews:"1,451",
-    img:"https://dynamic-media-cdn.tripadvisor.com/media/photo-o/21/67/e5/07/caption.jpg?w=300&h=300&s=1"
+    img:"https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/5c/29/77/caption.jpg?w=300&h=300&s=1"
 }]
 
-const Experiences = () => {
+const Experiences3 = () => {
   return (
     <div style={{width:"55%",margin:"auto"}}>
         
@@ -85,4 +85,4 @@ const Experiences = () => {
   )
 }
 
-export default Experiences
+export default Experiences3
