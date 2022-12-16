@@ -15,6 +15,7 @@ export default function Navbar(){
   const [email,setEmail]=useState("")
   const [password,setPassword]=useState("")
   const [isLoading,setIsLoading]=useState(false)
+  const [wrong,setWrong]=useState("")
 
   const createAccount=(<><FormControl>
     <FormLabel>First name</FormLabel>
@@ -33,6 +34,7 @@ export default function Navbar(){
     <FormLabel>Password</FormLabel>
     <Input onChange={(e)=>setPassword(e.target.value)} value={password} type='password' placeholder='Password' />
   </FormControl>
+  <Text color='red'>{wrong}</Text>
   </>)
 
 const signIn=(<>
@@ -45,6 +47,7 @@ const signIn=(<>
               <Input onChange={(e)=>setPassword(e.target.value)} value={password} type='password' placeholder='Password' />
             </FormControl>
             <Text mt='20px'>Not a user? <u onClick={()=>setNewUser(true)} style={{cursor:"pointer"}}>Create an account</u></Text>
+            <Text color='red'>{wrong}</Text>
 </>)
 
   const { isOpen, onOpen, onClose } = useDisclosure()
@@ -68,7 +71,8 @@ const signIn=(<>
         setEmail("")
   setPassword("")
       }
-  })
+  }).catch((error)=>{setIsLoading(false)
+    setWrong("Use credentials from reqres.in api for authentication")})
   }else if(newUser===true){
     setIsLoading(true)
     axios.post(`https://reqres.in/api/register`,data).then((response)=>{
@@ -79,7 +83,8 @@ const signIn=(<>
         setEmail("")
   setPassword("")
       }
-  })
+  }).catch((error)=>{setIsLoading(false)
+    setWrong("Use credentials from reqres.in api for authentication")})
   }
   
   }
