@@ -10,7 +10,7 @@ Dynamic Routing
 Admin Dashboard
 Basket Component
 
-#Tech Stack
+# Tech Stack
 
 ReactJs
 ChakraUI
