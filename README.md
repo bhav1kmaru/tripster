@@ -25,8 +25,8 @@ I have taken the design inspiration from tripadviser.in
 
 # Note
 
-I have used reqres.in for Authentication
-Use the following credentials:
-email: eve.holt@reqres.in
-password: cityslicka
+### I have used reqres.in for Authentication
+### Use the following credentials:
+### email: eve.holt@reqres.in
+### password: cityslicka
 
