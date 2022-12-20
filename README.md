@@ -12,8 +12,14 @@ I have taken the design inspiration from tripadviser.in
 # Highlights
 
 ### Dynamic Routing
+![image](https://user-images.githubusercontent.com/60300103/208618287-1c269a4d-6203-4ac9-9470-396e047c3acf.png)
+
 ### Admin Dashboard https://tripster-dashboard-bhav1kmaru.vercel.app/login
+![image](https://user-images.githubusercontent.com/60300103/208618429-33a0c076-47bb-427e-a464-ca1e002a5791.png)
+
 ### Basket Component
+![image](https://user-images.githubusercontent.com/60300103/208618561-cf4ccb15-a325-4980-a7aa-5d57c7ddbd97.png)
+
 
 # Tech Stack
 
