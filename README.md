@@ -12,7 +12,7 @@ I have taken the design inspiration from tripadviser.in
 # Highlights
 
 ### Dynamic Routing
-### Admin Dashboard
+### Admin Dashboard https://tripster-dashboard-bhav1kmaru.vercel.app/login
 ### Basket Component
 
 # Tech Stack
