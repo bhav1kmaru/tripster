@@ -6,15 +6,15 @@ I have taken the design inspiration from tripadviser.in
 
 # Highlights
 
-Dynamic Routing
-Admin Dashboard
-Basket Component
+### Dynamic Routing
+### Admin Dashboard
+### Basket Component
 
 # Tech Stack
 
-ReactJs
-ChakraUI
-MaterialUI
-axios
-JSON
+### ReactJs
+### ChakraUI
+### MaterialUI
+### axios
+### JSON
 
