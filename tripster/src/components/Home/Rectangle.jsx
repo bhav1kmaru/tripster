@@ -1,9 +1,9 @@
-import { Button, Card, CardBody, CardFooter, Heading, Image, Stack, Text } from '@chakra-ui/react'
+import { Box, Button, Card, CardBody, CardFooter, Heading, Image, Stack, Text } from '@chakra-ui/react'
 import React from 'react'
 
 const Rectangle = () => {
   return (
-    <div style={{margin:"auto",width:"60%",marginTop:"80px",display:"flex",padding:"20px",backgroundColor:"#faf1ed"}}>
+    <Box style={{margin:"auto",width:"60%",marginTop:"80px",padding:"20px",backgroundColor:"#faf1ed"}} display={{sm:"none",md:"flex",lg:"flex"}}>
         <Card
     variant='unstyled'
     gap="20px"
@@ -32,7 +32,7 @@ const Rectangle = () => {
       maxW={{ base: '100%', sm: '200px' }}
       src='https://dynamic-media-cdn.tripadvisor.com/media/photo-o/21/f7/1d/4d/caption.jpg?w=1000&h=-1&s=1'
       alt='Caffe Latte'
-    /></div>
+    /></Box>
         
     
   )
