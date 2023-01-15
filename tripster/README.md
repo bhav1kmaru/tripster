@@ -1,70 +1,38 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Tripster
 
-## Available Scripts
+![Tripster-removebg-preview](https://user-images.githubusercontent.com/60300103/208606224-dd0c564f-92f3-469d-be7d-880ba9fb3f84.png)
 
-In the project directory, you can run:
+Tripster, Inc. is an American online travel company that operates a website and mobile app with user-generated content and a comparison shopping website. It also offers online hotel reservations and bookings for transportation, lodging, travel experiences, and restaurants.
 
-### `npm start`
+deployed link : https://tripster5891.netlify.app/
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+I have taken the design inspiration from tripadviser.in
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Highlights
 
-### `npm test`
+### Dynamic Routing
+![image](https://user-images.githubusercontent.com/60300103/208618287-1c269a4d-6203-4ac9-9470-396e047c3acf.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Admin Dashboard https://tripster-dashboard-bhav1kmaru.vercel.app/login
+![image](https://user-images.githubusercontent.com/60300103/208618429-33a0c076-47bb-427e-a464-ca1e002a5791.png)
 
-### `npm run build`
+### Basket Component
+![image](https://user-images.githubusercontent.com/60300103/208618561-cf4ccb15-a325-4980-a7aa-5d57c7ddbd97.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Tech Stack
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### ReactJs
+### ChakraUI
+### MaterialUI
+### axios
+### JSON
 
-### `npm run eject`
+# Note
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### I have used reqres.in for Authentication
+### Use the following credentials:
+### email: eve.holt@reqres.in
+### password: cityslicka
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
